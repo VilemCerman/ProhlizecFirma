@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <!-- Bootstrap-->
@@ -51,6 +51,7 @@ if ($stmt->rowCount() == 0) {
     }
     echo "</table>";
 }
+echo "</br><a href='..\Prohlizec firma'>Zpět</a>";
 
 unset($stmt);
 ?>
