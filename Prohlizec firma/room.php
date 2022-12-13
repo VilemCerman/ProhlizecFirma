@@ -32,7 +32,7 @@ if ($id === null || $id === false) {
 }
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
 <!--    <meta name="viewport"-->
