@@ -11,7 +11,6 @@
 </head>
 <body class="container">
 <?php
-
 $input = filter_input(INPUT_GET,'sortby');
 //if($input === null || $input === false){
 //    $filter = 'name';
@@ -44,7 +43,7 @@ if ($stmt->rowCount() == 0) {
 } else {
     echo "<table class='table table-striped'>";
     echo "<tr>";
-    echo "<th>Název <a href='?sortby=name_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a> <a href='?sortby=name_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></a></th><th>Číslo <a href='?sortby=no_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></a> <a href='?sortby=no_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></a></th><th>Telefon <a href='?sortby=phone_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></a> <a href='?sortby=phone_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></a></th>";
+    echo "<th>Název <a href='?sortby=name_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a> <a href='?sortby=name_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a></th><th>Číslo <a href='?sortby=no_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a> <a href='?sortby=no_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a></th><th>Telefon <a href='?sortby=phone_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a> <a href='?sortby=phone_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a></th>";
     echo "</tr>";
     while ($row = $stmt->fetch()) {
         echo "<tr>";
@@ -53,7 +52,7 @@ if ($stmt->rowCount() == 0) {
     }
     echo "</table>";
 }
-echo "</br><a href='..\Prohlizec firma'>Zpět</a>";
+echo "<br><a href='../Prohlizec%20firma/'>Zpět</a>";
 unset($stmt);
 ?>
 </body>

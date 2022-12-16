@@ -41,8 +41,8 @@ if ($stmt->rowCount() == 0) {
 } else {
     echo "<table class='table table-striped'>";
     echo "<tr>";
-    echo "<th>Jméno <a href='?sortby=name_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></a> <a href='?sortby=name_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></a></th><th>Místnost <a href='?sortby=room_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></a> <a href='?sortby=room_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></a></th>
-<th>Telefon <a href='?sortby=phone_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></a> <a href='?sortby=phone_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></a></th><th>Pozice <a href='?sortby=job_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></a> <a href='?sortby=job_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></a></th>";
+    echo "<th>Jméno <a href='?sortby=name_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a> <a href='?sortby=name_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a></th><th>Místnost <a href='?sortby=room_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a> <a href='?sortby=room_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a></th>
+<th>Telefon <a href='?sortby=phone_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a> <a href='?sortby=phone_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a></th><th>Pozice <a href='?sortby=job_asc'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a> <a href='?sortby=job_desc'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a></th>";
     echo "</tr>";
     while ($row = $stmt->fetch()) {
         echo "<tr>";
@@ -51,7 +51,7 @@ if ($stmt->rowCount() == 0) {
     }
     echo "</table>";
 }
-echo "</br><a href='..\Prohlizec firma'>Zpět</a>";
+echo "<br><a href='../Prohlizec%20firma/'>Zpět</a>";
 
 unset($stmt);
 ?>
