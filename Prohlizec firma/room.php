@@ -67,18 +67,19 @@ switch ($status) {
             echo '<dd>---</dd>';
         }else {
             do {
-                echo "<a href='employee.php?employeeId={$room->employee_id}'><dd>{$room->surname} " . substr($room->employee_name, 0, 1) . ".</dd></a>";
+                echo "<dd><a href='employee.php?employeeId={$room->employee_id}'>{$room->surname} " . substr($room->employee_name, 0, 1) . ".</a></dd>";
             } while ($room = $stmt->fetch());
             echo "<dt>Průměrná mzda</dt>";
             echo "<dd>".round($avg->avg, 0).'</dd>';
         }
         echo "<dt>Klíče</dt>";
         do{
-            echo "<a href='employee.php?employeeId={$key->employee_id}'><dd>{$key->surname} ".substr($key->name,0,1).".</dd></a>";
+            echo "<dd><a href='employee.php?employeeId={$key->employee_id}'>{$key->surname} ".substr($key->name,0,1).".</a></dd>";
         }while($key = $stmtKeys->fetch());
+        echo "</dl>";
         break;
 }
-echo "</br><a href='rooms.php'>Zpět na seznam místností</a>";
+echo "<br><a href='rooms.php'>Zpět na seznam místností</a>";
 
 ?>
 </body>

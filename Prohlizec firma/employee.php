@@ -57,15 +57,16 @@ switch ($status) {
         echo "<dt>Mzda</dt>";
         echo "<dd>{$employee->wage}</dd>";
         echo "<dt>Místnost</dt>";
-        echo "<a href='room.php?roomId={$employee->room_id}'><dd>{$employee->room_name}</dd></a>";
+        echo "<dd><a href='room.php?roomId={$employee->room_id}'>{$employee->room_name}</a></dd>";
         echo "<dt>Klíče</dt>";
         while ($row=$stmtKeys->fetch()){
-            echo "<a href='room.php?roomId={$row->room}'><dd>{$row->room_name}</dd></a>";
+            echo "<dd><a href='room.php?roomId={$row->room}'>{$row->room_name}</a></dd>";
         }
+        echo "</dl>";
 
         break;
 }
-echo "</br><a href='employees.php'>Zpět na seznam zaměstnanců</a>";
+echo "<br><a href='employees.php'>Zpět na seznam zaměstnanců</a>";
 ?>
 </body>
 </html>
